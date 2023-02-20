@@ -62,4 +62,36 @@ public class Enemy : MonoBehaviour
         maxHealth = data.health;
         health = data.health;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Bullet"))
+            return;
+
+        health -= collision.GetComponent<Bullet>().damage;
+
+        
+        if (health > 0)
+        {
+            anim.SetTrigger("Hit");
+        }
+        else
+        {
+            Dead();
+        }
+    }
+    // I가 붙으면 인터페이스의 한 종류라 볼 수 있음
+    IEnumerator KnockBack()
+    {
+
+        yield return null; // 1프레임 쉬기
+
+        yield return new WaitForSeconds(2f); // 2초간 쉬기
+    }
+    void Dead()
+    {
+        gameObject.SetActive(false);
+    }
+
+    
 }
