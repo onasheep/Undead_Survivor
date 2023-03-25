@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if(!GameManager.instance.isLive)
+        {
+            return;
+        }
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
         
@@ -33,6 +37,10 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
         // 벡터값의 크기가 1이 되도록 수정함
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
@@ -40,6 +48,10 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
         anim.SetFloat("Speed", inputVec.magnitude);
         if(inputVec.x != 0)
         {
