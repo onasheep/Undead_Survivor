@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float speed;
     public Scanner scanner;
     public Hand[] hands;
+    public RuntimeAnimatorController[] animcon;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
