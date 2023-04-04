@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float speed;
     public Scanner scanner;
     public Hand[] hands;
-    public RuntimeAnimatorController[] animcon;
+    public RuntimeAnimatorController[] animCon;
 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
@@ -25,6 +25,11 @@ public class Player : MonoBehaviour
         // 활성화 안된 오브젝트도 GetComponent로 가져 올 수 있음.
     }
 
+    void OnEnable()
+    {
+        speed *= Character.Speed;
+        anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
+    }
     void Update()
     {
         if(!GameManager.instance.isLive)

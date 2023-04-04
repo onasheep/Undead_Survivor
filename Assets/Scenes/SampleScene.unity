@@ -6597,11 +6597,11 @@ MonoBehaviour:
   speed: 3
   scanner: {fileID: 0}
   hands: []
-  animcon:
+  animCon:
   - {fileID: 9100000, guid: e8a3dbe04e231984ea72070c407deb2d, type: 2}
   - {fileID: 22100000, guid: 7694b423a4db1494d9820ce989196b20, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 22100000, guid: 33287fbfa016e8f4093364a7cf98a5e8, type: 2}
+  - {fileID: 22100000, guid: f4f4343ddc71a4d4d99c17bd337a5d87, type: 2}
 --- !u!95 &468719590
 Animator:
   serializedVersion: 4
@@ -6875,11 +6875,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1948166508}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: GameStart
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -6978,7 +6978,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.37963
+  orthographic size: 8.333333
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16926,7 +16926,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC774\uB3D9\uC18D\uB3C4 10% \uC99D\uAC00"
+  m_Text: "\uC5F0\uC0AC\uC18D\uB3C4 10%\uC99D\uAC00"
 --- !u!222 &956571802
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23083,7 +23083,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1948166508}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: GameStart
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
